@@ -1,0 +1,18 @@
+specVersion: '2.1'
+metadata:
+  name: my-sapui5-app
+type: application
+server:
+  customMiddleware:
+    - name: myCustomMiddleware
+      afterMiddleware: compression
+  routes:
+    - name: resources
+      mountPath: /resources
+      inject: true
+      version: 1.78.0
+      cache:
+        controls: 30d
+    - name: local
+      mountPath: /local
+      inject: false
