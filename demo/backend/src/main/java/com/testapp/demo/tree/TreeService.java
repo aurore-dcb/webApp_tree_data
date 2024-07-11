@@ -11,7 +11,15 @@ public class TreeService {
     @Autowired
     private TreeRepository treeRepository;
 
-    public List<TreeDTO> getTreeTypes() {
+    public List<TreeInDistrictsDTO> getTreeDistricts() throws Exception {
+        try {
+            return treeRepository.fetchTreeDistricts();
+        } catch (Exception e) {
+            throw new Exception("Error while fetching tree in districts data", e);
+        } 
+    }
+
+    public List<TreeInTypesDTO> getTreeTypes() {
         return treeRepository.fetchTreeTypes();
     }
 }

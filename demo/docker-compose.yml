@@ -32,7 +32,7 @@ services:
       - ./frontend:/app
     ports:
       - "3000:8080"
-    command: sh -c "npm install -g live-server && live-server --port=8080 --host=0.0.0.0 --open=public/index.html"
+    command: sh -c "npm install -g live-server && live-server --port=8080 --host=0.0.0.0 --open=./index.html"
 
 volumes:
   pgdata: {}
