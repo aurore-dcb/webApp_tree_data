@@ -2,27 +2,27 @@ package com.testapp.demo.tree;
 
 public class TreeInDistrictsDTO {
     
-    private String arrondissement;
+    private String district;
     private Long count;
     
     public TreeInDistrictsDTO() {
     }
     
-    public TreeInDistrictsDTO(String arrondissement, Long count) {
-        this.arrondissement = arrondissement;
+    public TreeInDistrictsDTO(String district, Long count) {
+        this.district = district;
         this.count = count;
     }
     
-    public String getArr() {
-        return arrondissement;
+    public String getDistrict() {
+        return district;
     }
 
     public Long getCount() {
         return count;
     }
     
-    public void setArr(String arrondissement) {
-        this.arrondissement = arrondissement;
+    public void setDistrict(String district) {
+        this.district = district;
     }
 
     public void setCount(Long count) {
