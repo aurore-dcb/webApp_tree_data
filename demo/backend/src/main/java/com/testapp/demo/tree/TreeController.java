@@ -17,6 +17,10 @@ public class TreeController {
     @Autowired
     private TreeService treeService;
     
+    /**
+     * Get a list of the number of trees in each district
+     * @return List of TreeInDistrictsDTO
+     */
     @GetMapping("/districts/count")
     public List<TreeInDistrictsDTO> getNbTreeDistricts() {
         try {
@@ -26,6 +30,10 @@ public class TreeController {
         }
     }
 
+    /**
+     * Get a list of the number of trees for each type of tree
+     * @return List of TreeInTypesDTO
+     */
     @GetMapping("/types/count")
     public List<TreeInTypesDTO> getNbTreeTypes() {
         return treeService.getTreeTypes();

@@ -23,13 +23,15 @@ public class TreeRepository {
         this.externApiBaseUrl = externApiBaseUrl;
     }
     
-    /* Return a list of the number of trees for each district */
+    /** return a list of the number of trees for each district using the external API
+     * @return list of TreeInDistrictsDTO objects
+     */
     public List<TreeInDistrictsDTO> fetchTreeDistricts() {
         List<TreeInDistrictsDTO> treeDistricts = new ArrayList<>();
         BufferedReader in = null;
 
         try {
-			URL url = new URL(externApiBaseUrl + "/records?select=count(*)&group_by=arrondissement");
+			URL url = new URL(externApiBaseUrl + "/records?select=count(*)&where=search(arrondissement%2C%20%22PARIS%22)&group_by=arrondissement&limit=20");
 			URLConnection connection = url.openConnection();
 			in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             JSONParser parser = new JSONParser();
@@ -47,7 +49,9 @@ public class TreeRepository {
         return treeDistricts;
     }
 
-    /* Return a list of the number of trees for each type of tree */
+    /** return a list of the number of trees for each type of tree using the external API
+     * @return list of TreeInTypesDTO objects
+     */
     public List<TreeInTypesDTO> fetchTreeTypes() {
         List<TreeInTypesDTO> treeTypes = new ArrayList<>();
         BufferedReader in = null;

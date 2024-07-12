@@ -2,7 +2,7 @@ FROM node:14-alpine
 
 WORKDIR /app
 
-RUN npm install -g live-server && npm install
+RUN npm install -g live-server --no-optional && npm install --no-optional
 
 COPY . .
 

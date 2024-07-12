@@ -7,37 +7,51 @@
     <script
       src="https://rawgit.com/flatiron/director/master/build/director.min.js">
     </script>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="banner-container">
+      <div id="head-banner"></div>
+      <div id="head-banner-text">
+        <h1>Les arbres</h1>
+      </div>
+    </div>
+    
+    <div id="table-choices">
+      <a id="nb-arbre-dist" href="#/trees/districts/count"><button>Nombre d'arbres par arrondissement</button></a>
+      <a id="nb-arbre-type" href="#/trees/types/count"><button>Nombre d'arbres par genre d'arbre</button></a>
+    </div>
+    
+    <section id="table-place">
+      <p>Aucune table selectionnée</p>
+      
+      <table id="nb-trees-district">
+        <thead>
+          <tr>
+            <th>Arrondissement</th>
+            <th>Nombre d'arbres</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      
+      <table id="nb-trees-types">
+        <thead>
+          <tr>
+            <th>Genre</th>
+            <th>Nombre d'arbres</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      
+    </section>
+    
     <script src="./env.js"></script>
-    <script src="./router.js"></script>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <h1>Homepage</h1>
-    <a href="#/trees/districts/count"><button>number of trees in each district</button></a>
-    <a href="#/trees/types/count"><button>number of trees for each type</button></a>
-
-    <table id="nb-trees-district">
-      <caption>Nombre d'arbres par arrondissement</caption>
-      <thead>
-        <tr>
-          <th>Arrondissement</th>
-          <th>Nombre d'arbres</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-
-    <table id="nb-trees-types">
-      <caption>Nombre d'arbres par genre d'arbre</caption>
-      <thead>
-        <tr>
-          <th>Genre</th>
-          <th>Nombre d'arbres</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-</body>
-</html>
+    <script src="./js/tables.js"></script>
+    <script src="./js/router.js"></script>
+    
+  </body>
+  </html>
