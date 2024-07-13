@@ -88,7 +88,7 @@ function buildTableTypes(data) {
  * 	@return {void}
  */
 var count_trees = function (route) {
-	fetch(window._env_.API_BASE_URL + route, {
+	fetch(window._global_.API_BASE_URL + route, {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',
