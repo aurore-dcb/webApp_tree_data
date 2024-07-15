@@ -8,7 +8,9 @@ A web application with a Java backend and a JS frontend that makes requests to a
 - EXTERN_API_BASE_URL=https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/les-arbres
 - POSTGRES_PASSWORD= ...
 - POSTGRES_USER= ...
-- POSTGRES_DB=mydb
+- POSTGRES_DB=mydb \
+
+in the demo/ directory
 
 ## Run :
 ``` shell
