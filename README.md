@@ -14,4 +14,5 @@ A web application with a Java backend and a JS frontend that makes requests to a
 ``` shell
 cd demo/
 docker-compose up --build
+http://localhost:3000/
 ```
